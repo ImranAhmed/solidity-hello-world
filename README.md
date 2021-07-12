@@ -3,6 +3,7 @@ Sample HelloWorld contract with a function to update greeting which can only be 
 
 Hardhat support for compile, test and deploy.
 
+## Clean Build
 1. Create Contract
 ```
 mkdir solidity-hello-world
@@ -53,12 +54,12 @@ ALCHEMY_API_URL: Go to [Alchemy](https://www.alchemyapi.io), sign up, create  ne
 npx hardhat run scripts/hello-world.js --network ropsten
 ```
 
-6. Submit Contract to Etherscan
+7. Submit Contract to Etherscan
 ```
 npx hardhat verify --network ropsten "DEPLOYED_CONTRACT_ADDRESS"
 ```
 
-7. View Contract on Etherscan
+8. View Contract on Etherscan
 https://ropsten.etherscan.io/address/DEPLOYED_CONTRACT_ADDRESS#code
 
 ## Further Reading
