@@ -1,7 +1,8 @@
-### Fresh Install
+### About
 Sample HelloWorld contract with a function to update greeting which can only be called by the owner.
 
-#Fresh Install
+Hardhat support for compile, test and deploy.
+
 1. Create Contract
 ```
 mkdir solidity-hello-world
@@ -12,7 +13,7 @@ cd contracts
 touch HelloWorld.sol
 ```
 
-2. Install (Hardhat)[https://hardhat.org/getting-started/]
+2. Install [Hardhat](https://hardhat.org/getting-started/)
 ```
 npm install --save-dev hardhat
 npx hardhat (create a new project)
@@ -24,8 +25,7 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
 npx hardhat compile
 ```
 
-4. Write Unit Test for Contract
-See `/test/hello-world.js` for example test script.
+4. Write Unit Test for Contract. See `/test/hello-world.js` for example test script.
 
 ```
 npx hardhat test
@@ -40,14 +40,14 @@ npm install --save-dev dotenv
 touch .env 
 ```
 
-.env
-add following keys:
+6. Secrets
+add following keys .env file. Do not check in .env file, .gitignore contains this file to prevent accidental check-in.
 
 PRIVATE_KEY: PK of the wallet that will deploy and own the contract
 
-ETHERSCAN_API_KEY: API Key for (Etherscan)[https://info.etherscan.com/etherscan-developer-api-key/], used when verifying contract
+ETHERSCAN_API_KEY: API Key for [Etherscan](https://info.etherscan.com/etherscan-developer-api-key/), used when verifying contract
 
-ALCHEMY_API_URL: Go to (Alchemy)[https://www.alchemyapi.io], sign up, create  new app. We are using Alchemy but pointing url to any Ethereum node or gateway would work.
+ALCHEMY_API_URL: Go to [Alchemy](https://www.alchemyapi.io), sign up, create  new app. We are using Alchemy but pointing url to any Ethereum node or gateway would work.
 
 ```
 npx hardhat run scripts/hello-world.js --network ropsten
@@ -62,4 +62,4 @@ npx hardhat verify --network ropsten "DEPLOYED_CONTRACT_ADDRESS"
 https://ropsten.etherscan.io/address/DEPLOYED_CONTRACT_ADDRESS#code
 
 ## Further Reading
-(Hardhat Deploy)[https://hardhat.org/plugins/hardhat-deploy.html]
+[Hardhat Deploy](https://hardhat.org/plugins/hardhat-deploy.html)
